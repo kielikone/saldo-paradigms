@@ -5,6 +5,7 @@ lib:
 
 python: lib
 	cp -r saldo-inflector/lib saldo-python/src/saldo/lib
+	cp README.md saldo-python/README.md
 	cd saldo-python; \
 	  python3 -m build; \
 	  python3 -m wheel tags --platform-tag $(shell python3 saldo-python/correct_tag.py) dist/saldo_python-*-py3-none-any.whl; \
@@ -21,6 +22,7 @@ docker-python-linux-aarch64:
 clean:
 	cd saldo-inflector; make clean
 	rm -rf saldo-python/src/saldo/lib
+	rm -f saldo-python/README.md
 	rm -rf saldo-python/dist
 
 .PHONY: all clean

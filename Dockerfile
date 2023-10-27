@@ -6,6 +6,7 @@ RUN useradd -m nonroot
 ADD saldo-inflector /home/nonroot/saldo-inflector
 ADD saldo-python /home/nonroot/saldo-python
 ADD Makefile /home/nonroot/Makefile
+ADD README.md /home/nonroot/README.md
 RUN chown -R nonroot /home/nonroot
 USER nonroot
 WORKDIR /home/nonroot

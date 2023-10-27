@@ -12,5 +12,7 @@ if platform.system() == "Darwin":
     prefix = tentative.split("_")[0]
     postfix = "_".join(tentative.split("_")[2:])
     tentative = prefix + "_" + version + "_0_" + postfix
+elif platform.system() == "Linux":
+    tentative = tentative.replace("linux", "manylinux_2_27") # Can't do much better with ghc dep
 
 print(tentative)
