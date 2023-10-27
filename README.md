@@ -18,7 +18,7 @@ This library supports amd64 and aarch64 Linux and macOS. There is no fundamental
 
 ### Pypi
 
-Simply `pip install saldo-inflector`. (Wheels for x86_64 / aarch64 Linux and aarch64 macOS still pending)
+Simply `pip install saldo-inflector`.
 
 ### Building for Linux
 
