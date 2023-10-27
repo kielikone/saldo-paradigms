@@ -9,7 +9,7 @@ python: lib
 	cd saldo-python; \
 	  python3 -m build; \
 	  python3 -m wheel tags --platform-tag $(shell python3 saldo-python/correct_tag.py) dist/saldo_python-*-py3-none-any.whl; \
-	  rm dist/saldo_python-0.0.1-py3-none-any.whl dist/saldo-python-*.tar.gz
+	  rm dist/saldo_python-*-py3-none-any.whl dist/saldo-python-*.tar.gz
 
 docker-python-linux-amd64:
 	docker build . --platform=linux/amd64 -t saldobuilder-linux-amd64
